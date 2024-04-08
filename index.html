@@ -14,7 +14,7 @@
     }
 
     /* ❗ do NOT change this style */
-    body,
+
     #challenge {
       display: flex;
       flex-direction: column;
@@ -45,6 +45,17 @@
       padding: 2px;
     }
 
+    h1,
+    h2,
+    p {
+      text-align: center;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
     /* ❗ 👉 WORK BELOW THIS LINE! */
     /* ❗ 👉 WORK BELOW THIS LINE! */
     /* ❗ 👉 WORK BELOW THIS LINE! */
@@ -56,27 +67,226 @@
     */
 
     /* 👉 Task 1 - [HINT] only the flex container needs to be manipulated */
+    #flexContainer1 {
+      display: flex;
+      justify-content: space-evenly;
+    }
 
     /* 👉 Task 2 - [HINT] the flex container needs to change direction */
+    #flexContainer2 {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     /* 👉 Task 3 - [HINT] the flex direction can be reversed */
+    #flexContainer3 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
 
     /* 👉 Task 4 - [HINT] the flex items need a new order */
+    #flexContainer4 {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
 
     /* 👉 Task 5 - [HINT] research align-self */
+    #flexContainer5 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #flexContainer5 .flexItem:nth-child(2) {
+      align-self: center;
+    }
 
     /* 👉 Task 6 - [HINT] flex items can be flex containers */
+    #flexContainer6 {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    #flexContainer6 .flexItem:nth-child(1) {
+      justify-content: flex-end;
+    }
+
+    #flexContainer6 .flexItem:nth-child(2) {
+      align-items: flex-end;
+    }
+
+    #flexContainer6 .flexItem:nth-child(3) {
+      align-self: flex-start;
+    }
 
     /* 👉 Task 7 - [HINT] research flex-grow */
+    #flexContainer7 {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    #flexContainer7 .flexItem:nth-child(2) {
+      flex-grow: 1;
+    }
+
+    #flexContainer7 .flexItem:nth-child(3) {
+      flex-grow: 2;
+    }
 
     /* 👉 Task 8 - [HINT] you got this! */
+    #flexContainer8 {
+      display: flex;
 
+      justify-content: space-between;
+
+    }
+
+    #flexContainer8 .flexItem:nth-child(1) {
+      justify-content: flex-end;
+    }
+
+    #flexContainer8 .flexItem:nth-child(2) {
+      align-self: center;
+    }
+
+    #flexContainer8 .flexItem:nth-child(3) {
+      justify-content: flex-start;
+      align-self: flex-end;
+    }
 
     /*
     👉 Part 2 of 2 👈
     Revisit the Module Project of HTML & CSS II and re-style it using Flexbox.
     Prior to starting, remove the "inline-block" declarations, which were a workaround to make divs fall in rows.
     */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* 👉 Task 3- Target the element with id headerTop.
+    Apply white color to the text, some padding using px or rem units, and a dark background color. */
+    #headerTop {
+      color: white;
+      padding: 10px;
+      background-color: rgb(20, 121, 199);
+    }
+
+    /* 👉 Task 4- Target the divs that are directly nested underneath the id headerTop.
+    Make them display as inline block, instead of block.
+    This will make them render on the same line. */
+    #headerTop {
+      display: flex;
+      align-items: center;
+    }
+
+    /* 👉 Task 5- Target the spans that are nested inside the id headerTop.
+    Make them have some margin on the right.
+    This will prevent the spans from crashing against one another. */
+    #headerTop span {
+      margin-right: 15px;
+    }
+
+    /* 👉 Task 6- Target the first span nested inside the element with id headerTop.
+    Make it have a font weight of bold, and transform the text to uppercase. */
+    .logo {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* 👉 Task 7- Target the id headerBottom.
+    Give it a bottom border of 1 pixel, solid gray, and a little bit of padding using px or rem units. */
+    #headerBottom {
+      border-bottom: 2px solid gray;
+      padding: 15px;
+      color: white;
+    }
+
+    /* 👉 Task 8- Target the divs that are nested directly inside the element with id headerBottom.
+    Make them display as inline block, instead of block.
+    This will cause them to render on the same line.
+    You can consolidate this rule with the one on step. 4 */
+    #headerBottom {
+      display: flex;
+      align-items: center;
+    }
+
+    /* 👉 Task 9- Target the "Compose" button, although note it's a div instead an actual button.
+    Give it color, bold text, background, padding, border radius, margin right, and a cursor of pointer. */
+    .compose {
+      font-weight: bold;
+      background-color: rgb(20, 121, 199);
+      padding: 10px;
+      border-radius: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    input
+    {
+      padding: 5px;
+      border-radius: 5px;
+      border: 0;
+    }
+    /* 👉 Task 10- Research how to remove all the default styling of button elements.
+    Target the button elements inside the element with id headerBottom.
+    Remove all their styling, give them a bit of margin to the right, and a cursor of pointer. */
+    #headerBottom button {
+      margin-right: 5px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    /* 👉 Task 11- Target the button element inside the id headerBottom that has a class of active
+    Make the font weight be bolder, and add a bottom border of 2 pixels solid color (you choose the color).
+    Add the class name to the "All mail" button. */
+    #headerBottom button.active {
+      border-bottom: 2px solid rgb(13, 99, 168);
+      font-weight: bold;
+    }
+
+    /* 👉 Task 12- Target all divs directly nested inside elements with a class of email,
+    and make them display as inline-block elements.
+    This will make each email render all its details in the same line*/
+    .email {
+      display: flex;
+    }
+
+    /* 👉 Task 13- Target the elements with a class of email.
+    Give them some padding, bigger padding to the left, and a bottom border of very light grey. */
+    .email {
+      padding: 10px;
+      padding-left: 20px;
+      border-bottom: 1px solid gray;
+
+    }
+
+    /* 👉 Task 14- Target each div inside the element with a class of email.
+    Make the email author and the email subject take 35% of the width of the parent element.
+    Make the check, the date and the size take up 8% of the width of the parent element.
+    This will arrange the details in visible columns. */
+    .email-name,
+    .email-subject {
+      width: 35%;
+    }
+
+    .email-check,
+    .email-date,
+    .email-size {
+      width: 8%
+    }
+
+    /* 👉 Task 15- Target the second email and have its font weight be bold.
+    This will make it look "unread". */
+    .email:nth-child(1) {
+      font-weight: bold;
+    }
 
     /* ❗ 👉 WORK ABOVE THIS LINE! */
     /* ❗ 👉 WORK ABOVE THIS LINE! */
@@ -89,8 +299,7 @@
   <p>Please load this file in VSCode and Chrome, and open the Elements tab in Chrome Dev Tools.</p>
 
   <h2>👉 Part 1 of 2 👈</h2>
-  <p>Work through the tasks until the boxes match the <a href="./design/part-1.png">DESIGN</a>.</p>
-  <p>Making changes to the HTML is not allowed! The tasks must be completed using CSS alone.</p>
+
 
   <div id="challenge">
     <div id="flexContainer1">
@@ -101,10 +310,37 @@
   </div>
 
   <h2>👉 Part 2 of 2 👈</h2>
-  <p>Revisit the <a href="./design/part-2.png">Module Project of HTML & CSS II</a> and re-style it using Flexbox. You do
-    not need to submit that repo again.</p>
-  <p>Prior to starting, <b>remove the "inline-block" declarations</b>, which were a workaround to make divs fall in
-    rows.</p>
+  <div>
+    <header>
+      <div id="headerTop">
+        <div>
+          <span class="logo">Super Mail</span>
+          <span>Jess</span>
+        </div>
+        <div>
+          <input type="text" placeholder="Search Mail" />
+        </div>
+      </div>
+      <div id="headerBottom">
+        <div class="compose">Compose</div>
+        <div>
+          <button class="active">All mail</button>
+          <button>Unread</button>
+          <button>Pinned</button>
+          <button>VIPs</button>
+        </div>
+      </div>
+    </header>
+    <main id="emails">
+      <div class="email">
+        <div class="email-check"><input type="checkbox" /></div>
+        <div class="email-name">Carol Shaw</div>
+        <div class="email-subject">Your login link</div>
+        <div class="email-date">Feb 28</div>
+        <div class="email-size">16 KB</div>
+      </div>
+    </main>
+  </div>
 
   <script>
     [2, 3, 4, 5, 6, 7, 8].forEach(int => {
@@ -117,6 +353,21 @@
       const h2 = document.createElement('h2')
       h2.textContent = `Task ${idx + 1}`
       cont.insertAdjacentElement('beforebegin', h2)
+    })
+
+    const emailData = [
+      { name: 'Ada Lovelace', subject: 'A new device is using your account', date: 'Feb 28', size: '2 KB' },
+      { name: 'Grace Hopper', subject: 'Undelivered mail returned to sender', date: 'Feb 27', size: '6 KB' },
+      { name: 'Carol Shaw', subject: 'Approve sign-in', date: 'Feb 25', size: '14 KB' },
+      { name: 'Edith Clarke', subject: 'Fwd: Invoice', date: 'Feb 24', size: '33 KB' },
+    ]
+    emailData.forEach(email => {
+      const clone = emails.querySelector('.email').cloneNode(true)
+      clone.querySelector('.email-name').textContent = email.name
+      clone.querySelector('.email-subject').textContent = email.subject
+      clone.querySelector('.email-date').textContent = email.date
+      clone.querySelector('.email-size').textContent = email.size
+      emails.append(clone)
     })
   </script>
 </body>
